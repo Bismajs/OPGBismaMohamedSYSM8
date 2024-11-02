@@ -37,7 +37,7 @@
         <Label Content="TRACK" FontSize="40" Margin="205,60,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
 
         <!-- liten profilbild, också knapp som öppnar userdetails -->
-        <Button x:Name="Profile_btn" Content="ME" Margin="372,48,138,316" Height="30" Width="30" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="Profile_btn_Click" >
+        <Button x:Name="Profile_btn" Content="ME" Margin="362,48,132,301" Height="30" Width="30" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="Profile_btn_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="button" CornerRadius="20" Background="#D3D3D3">
@@ -71,7 +71,7 @@
         </ListBox>
 
         <!-- knappar till resten av fönstren -->
-        <StackPanel Orientation="Horizontal" Margin="280,130,-500,-600">
+        <StackPanel Orientation="Horizontal" Margin="272,130,-500,-600">
 
 
             <Button x:Name="Details_btn" Content="Details" Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Click="Details_btn_Click" >
