@@ -27,7 +27,7 @@
         </Grid.RowDefinitions>
 
         <Rectangle Fill="white" Width="600" Height="350" RadiusX="29.88" RadiusY="29.88" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="4" />
-        <Grid Grid.Row="1" Background="#D3D3D3" Margin="125,65,125,50">
+        <Grid Grid.Row="1" Background="#D3D3D3" Margin="125,65,125,40">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*"/>
@@ -42,7 +42,7 @@
             <TextBlock Text="Notes" Grid.Column="4" Padding="5"/>
         </Grid>
 
-        <Grid Grid.Row="1" Background="#D3D3D3" Margin="125,93,125,20">
+        <Grid Grid.Row="1" Background="#D3D3D3" Margin="125,93,125,15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*"/>
@@ -62,7 +62,7 @@
             <TextBox x:Name="NotesTextBox" Grid.Column="4" Padding="5"/>
             
         </Grid>
-        <Grid Grid.Row="1" Height="25" Width="350" Margin="125,121,375,136" Background="#D3D3D3" Grid.RowSpan="2" >
+        <Grid Grid.Row="1" Height="25" Width="350" Margin="125,115,359,120" Background="#D3D3D3" Grid.RowSpan="2" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*"/>
@@ -83,7 +83,7 @@
         </Grid>
 
         <!-- knapp för att spara träningspasset -->
-        <Button x:Name="SaveWorkout_btn" Content="Save" Margin="0,343,0,-230" Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="SaveWorkout_btn_Click">
+        <Button x:Name="SaveWorkout_btn" Content="Save" Margin="0,310,0,-230" Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="SaveWorkout_btn_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="button" CornerRadius="10" Background="#d3d3d3">
