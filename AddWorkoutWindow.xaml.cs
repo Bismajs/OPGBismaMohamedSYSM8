@@ -25,7 +25,8 @@ namespace FitTrack
         }
 
         private void SaveWorkout_btn_Click(object sender, RoutedEventArgs e)
-        { }
+        {
+        }
 
 
 
