@@ -8,11 +8,13 @@ namespace FitTrack
 {
     public class CardioWorkout : Workout
     {
+        //EGENSKAP
         public int Distance { get; set; }
+        //METOD
         public override int CalculateCaloriesBurned()
         {
             // Beräkningslogik för konditionsträning
-            return Distance * 10; // Exempelvärde
+            return Distance * 10; // förbränning per distansenhet
         }
     }
     }

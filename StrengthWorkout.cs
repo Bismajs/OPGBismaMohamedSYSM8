@@ -8,8 +8,10 @@ namespace FitTrack
 {
     public class StrengthWorkout : Workout
     {
+        //egenskap
         public int Repetitions { get; set; }
 
+        //metod
         public override int CalculateCaloriesBurned()
         {
             // Beräkningslogik för styrketräning

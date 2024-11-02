@@ -20,18 +20,49 @@ namespace FitTrack
         {
             InitializeComponent();
         }
+
         private void NavigateToForgotPasswordWindow(object sender, RoutedEventArgs e)
-        { 
+        {
+            //navigerar till forgotpasswordwindow
+            ForgotPasswordWindow forgotPasswordWindow = new ForgotPasswordWindow();
+            forgotPasswordWindow.Show();
+            this.Close(); // Stäng aktuellt fönster
         }
 
+        //navigerar till workoutwindow
         private void NavigateToWorkoutsWindow(object sender, RoutedEventArgs e)
-        { 
+        {
+            // Hämta användarnamn och lösenord från inputrutorr
+            string username = username_Txb.Text;
+            string password = passwordBox.Password;
+
+            // Validerar användarnamn och lösenror
+            if (UserManager.ValidateUser(username, password))
+            {
+                // Login Funkar, Hämtar User object
+                User authenticatedUser = UserManager.GetUserByUsername(username);
+
+                // Öppnar workoutswindow 
+                WorkoutsWindow workoutsWindow = new WorkoutsWindow(authenticatedUser);
+                workoutsWindow.Show();
+                this.Close(); // Stäng aktuellt fönster
+            }
+            else
+            {
+                // fel inputs i rutoorna
+                MessageBox.Show("Fel användarnamn eller lösenord.", "Fel", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+
         }
 
-            private void NavigateToRegisterWindow(object sender, RoutedEventArgs e)
-        { 
-        }
+        //navigerar till registerfönstret
 
-
+        private void NavigateToRegisterWindow(object sender, RoutedEventArgs e)
+        {
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.Show();
+            this.Close(); // Stäng aktuellt fönster
         }
+    }
 }
