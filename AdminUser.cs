@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FitTrack
 {
-    public class AdminUser : User
+    public class AdminUser 
     {
 
     }

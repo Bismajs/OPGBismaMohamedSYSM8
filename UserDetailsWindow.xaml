@@ -22,6 +22,7 @@
         <Label Content="FIT" FontSize="40" Margin="400,60,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
         <Label Content="TRACK" FontSize="40" Margin="365,95,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
 
+        <!-- stack med inputrutor för ändring av username, lösenord och land -->
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,0">
             <TextBlock Text="Change username" HorizontalAlignment="Center" Margin="0,0,0,5" FontSize="12" Foreground="#DC143C" FontWeight="Bold"/>
             <TextBox x:Name="Newuser" HorizontalAlignment="Center" Width="150"  />
@@ -46,6 +47,7 @@
 
         </StackPanel>
 
+        <!-- knapp för att spara ändringar -->
         <Button x:Name="Confirm_Btn" Content="Confirm" Margin="395,373,395,81" Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Click="Confirm_Btn_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">

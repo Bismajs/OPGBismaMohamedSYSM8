@@ -19,6 +19,7 @@
 
         </Grid.Background>
 
+        <!-- grid uppdelning -->
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition />
@@ -26,6 +27,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <!-- fin navbar -->
         <Rectangle Fill="white" Width="600" Height="350" RadiusX="29.88" RadiusY="29.88" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="4" />
         <Grid Grid.Row="1" Background="LightGray" Margin="125,65,125,50">
             <Grid.ColumnDefinitions>
@@ -42,6 +44,7 @@
             <TextBlock Text="Notes" Grid.Column="4" Padding="5"/>
         </Grid>
 
+        
         <Grid Grid.Row="1" Background="LightGray" Margin="125,93,125,20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -50,6 +53,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
+           <!-- låsta inputrutor för detaljerna från navbaren --> 
             <TextBox x:Name="DateTextBox" Grid.Column="0" Padding="5"/>
             <TextBox x:Name="DurationTextBox" Grid.Column="1" Padding="5"/>
             <ComboBox x:Name="TypeComboBox" Grid.Column="2" Padding="5"/>
@@ -57,6 +62,7 @@
             <TextBox x:Name="NotesTextBox" Grid.Column="4" Padding="5"/>
         </Grid>
 
+     
         <Grid Grid.Row="1" Height="25" Width="350" Margin="125,121,375,136" Background="#D3D3D3" Grid.RowSpan="2" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -65,7 +71,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-
+                
+   <!-- ytterligare låsta inputrutor för att redigera träningspasset -->
             </Grid.ColumnDefinitions>
             <TextBlock Text="Reps:" Grid.Column="0" Padding="5"/>
             <TextBox x:Name="RepsTextBox" Grid.Column="1" Padding="5"/>
@@ -76,6 +83,7 @@
 
         </Grid>
 
+        <!-- knapp för att låsa upp inputrutorna så att de kan redigeras -->
         <Button x:Name="Save_Btn" Content="Save"  Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Grid.Row="3"  Margin="425,55,365,56" Click="Save_Btn_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -91,6 +99,7 @@
             </Button.Template>
         </Button>
 
+        <!-- knapp för att spara redigeringar -->
         <Button x:Name="Edit_Btn" Content="Edit"  Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Grid.Row="3" Margin="355,55,425,56" Click="Edit_Btn_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">

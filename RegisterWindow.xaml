@@ -34,6 +34,7 @@
         <Label Content="FIT" FontSize="40" Margin="235,0,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
         <Label Content="TRACK" FontSize="40" Margin="205,35,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
 
+        <!-- Inputrutor för all info om en ny användare. -->
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-60,0,0">
             <TextBlock  Text="UserName" FontSize="10" Margin="0,90,0,0" FontWeight="Bold" FontStyle="Italic" Foreground="#DC143C" Height="20" Grid.Column="1" Grid.Row="1"/>
             <TextBox x:Name="Username_Txb" Width="200" Height="20" Grid.Column="1" Grid.Row="1"/>
@@ -69,11 +70,11 @@
 
 
         <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,430,0,-150">
-
+            <!-- textruta för att besvara säkerhetsfrågan, den ligger i en annan stackpanel så att den kan vara bredvid comboboxen. -->
             <TextBlock Text="Answer" Margin="223,-470,0,0" FontSize="10" FontWeight="Bold" FontStyle="Italic" Foreground="#DC143C" Height="20" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
             <TextBox x:Name="Securityan_tbx" Width="100" Height="20" Margin="100,-420,0,0"/>
 
-
+            <!-- knapp för att registrera användaren och ta hen till login -->
             <Button x:Name="btn_register" Content="Register" Margin="190,-130,190,120" Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="NavigateToLogin">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">

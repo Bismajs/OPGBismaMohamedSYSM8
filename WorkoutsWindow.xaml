@@ -36,6 +36,7 @@
         <Label Content="FIT" FontSize="40" Margin="235,25,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
         <Label Content="TRACK" FontSize="40" Margin="205,60,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
 
+        <!-- liten profilbild, också knapp som öppnar userdetails -->
         <Button x:Name="Profile_btn" Content="ME" Margin="372,48,138,316" Height="30" Width="30" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="Profile_btn_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -53,6 +54,7 @@
 
         <Label Content="Your Workouts:" Margin="375,200,-500,-600" Foreground="#DC143C" FontWeight="bold"/>
 
+        <!-- listbox som lagrar skapade träningspass -->
         <ListBox x:Name="workoutlist" VerticalAlignment="Top" HorizontalAlignment="Center" Height="120" Width="253" Grid.Column="1" Margin="0,183,0,0" Grid.Row="1">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -68,6 +70,7 @@
 
         </ListBox>
 
+        <!-- knappar till resten av fönstren -->
         <StackPanel Orientation="Horizontal" Margin="280,130,-500,-600">
 
 

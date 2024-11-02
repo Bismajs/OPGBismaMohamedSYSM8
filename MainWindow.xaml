@@ -8,7 +8,7 @@
         Title="MainWindow" Height="500" Width="850"
         Background="Transparent">
     <Grid>
-
+       
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,2"
                                      EndPoint="1,1">
@@ -30,11 +30,14 @@
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
 
+        <!-- En box som håller UI content -->
         <Rectangle Fill="white" Width="500" Height="350" RadiusX="29.88" RadiusY="29.88" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
 
+        <!-- Logo -->
         <Label Content="FIT" FontSize="40" Margin="235,25,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
         <Label Content="TRACK" FontSize="40" Margin="205,60,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
 
+        <!-- inputrutor för användarnamn och lösenord -->
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-60,0,0">
             <TextBlock  Text="UserName" FontSize="12" Margin="0,10,0,0" FontWeight="Bold" FontStyle="Italic" Foreground="#DC143C" Height="20" Grid.Column="1" Grid.Row="1"/>
             <TextBox x:Name="username_Txb"  Width="200" Height="20" Grid.Column="1" Grid.Row="1"/>
@@ -43,6 +46,7 @@
             <PasswordBox x:Name="passwordBox" Width="200" Height="20" Grid.Column="1" Grid.Row="1"/>
         </StackPanel>
 
+        <!-- buttons för andra fönster -->
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,430,0,-150">
             <Button x:Name="reset_Btn" Content="Forgot Your Password?" Height="30" Width="130" Margin="190,-400,190,120" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="NavigateToForgotPasswordWindow">
                 <Button.Template>
