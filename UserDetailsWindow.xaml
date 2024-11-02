@@ -5,8 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitTrack"
         mc:Ignorable="d"
-        Title="UserDetailsWindow" Height="450" Width="800">
+        Title="UserDetailsWindow" Height="500" Width="850">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,2"
+                     EndPoint="1,1">
+                <GradientStop Color="#DC143C"
+              Offset="1"/>
+                <GradientStop Color="#D3D3D3"
+              Offset="0.1"/>
+            </LinearGradientBrush>
+
+        </Grid.Background>
+
+        <Rectangle Fill="white" Width="600" Height="350" RadiusX="29.88" RadiusY="29.88" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="4" />
+        <Label Content="FIT" FontSize="40" Margin="400,60,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="TRACK" FontSize="40" Margin="365,95,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,0">
+            <TextBlock Text="Change username" HorizontalAlignment="Center" Margin="0,0,0,5" FontSize="12" Foreground="#DC143C" FontWeight="Bold"/>
+            <TextBox x:Name="Newuser" HorizontalAlignment="Center" Width="150"  />
+            <TextBlock Text="Change password" HorizontalAlignment="Center" Margin="0,5,0,5" FontSize="12" Foreground="#DC143C" FontWeight="Bold"/>
+            <PasswordBox x:Name="Newpass" HorizontalAlignment="Center" Width="150"  />
+            <TextBlock Text="Confirm password" HorizontalAlignment="Center" Margin="0,5,0,5" FontSize="12" Foreground="#DC143C" FontWeight="Bold"/>
+            <PasswordBox x:Name="Confirmpass" HorizontalAlignment="Center" Width="150"  />
+            <TextBlock Text="Change Country" HorizontalAlignment="Center" Margin="0,5,0,5" FontSize="12" Foreground="#DC143C" FontWeight="Bold" />
+            <ComboBox x:Name="CountryComboBox" >
+                <ComboBoxItem Content="Sweden" />
+                <ComboBoxItem Content="Albania" />
+                <ComboBoxItem Content="Palestine" />
+                <ComboBoxItem Content="Somalia" />
+                <ComboBoxItem Content="Thailand" />
+                <ComboBoxItem Content="China" />
+                <ComboBoxItem Content="Australia" />
+                <ComboBoxItem Content="Nigeria" />
+                <ComboBoxItem Content="Russia" />
+                <ComboBoxItem Content="America" />
+            </ComboBox>
+
+
+        </StackPanel>
+
+        <Button x:Name="Confirm_Btn" Content="Confirm" Margin="395,373,395,81" Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Click="Confirm_Btn_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="button" CornerRadius="10" Background="#d3d3d3">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#DC143C" TargetName="button"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Button.Template>
+        </Button>
+
     </Grid>
 </Window>

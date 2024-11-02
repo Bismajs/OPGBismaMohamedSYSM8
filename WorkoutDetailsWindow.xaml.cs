@@ -23,5 +23,15 @@ namespace FitTrack
         {
             InitializeComponent();
         }
-    }
+
+        private void Edit_Btn_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Save_Btn_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+
+        }
 }

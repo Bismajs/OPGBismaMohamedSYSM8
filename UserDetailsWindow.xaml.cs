@@ -23,5 +23,9 @@ namespace FitTrack
         {
             InitializeComponent();
         }
-    }
+        private void Confirm_Btn_Click(object sender, RoutedEventArgs e)
+        { 
+        }
+
+        }
 }
