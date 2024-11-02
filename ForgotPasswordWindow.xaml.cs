@@ -23,5 +23,11 @@ namespace FitTrack
         {
             InitializeComponent();
         }
-    }
+
+        private void NavigateToLogin2(object sender, RoutedEventArgs e)
+        { 
+        }
+
+
+        }
 }

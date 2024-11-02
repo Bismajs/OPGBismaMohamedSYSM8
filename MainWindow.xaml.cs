@@ -20,5 +20,18 @@ namespace FitTrack
         {
             InitializeComponent();
         }
-    }
+        private void NavigateToForgotPasswordWindow(object sender, RoutedEventArgs e)
+        { 
+        }
+
+        private void NavigateToWorkoutsWindow(object sender, RoutedEventArgs e)
+        { 
+        }
+
+            private void NavigateToRegisterWindow(object sender, RoutedEventArgs e)
+        { 
+        }
+
+
+        }
 }

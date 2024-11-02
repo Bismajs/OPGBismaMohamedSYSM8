@@ -5,8 +5,131 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitTrack"
         mc:Ignorable="d"
-        Title="WorkoutsWindow" Height="450" Width="800">
+        Title="WorkoutsWindow" Height="500" Width="850">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,2"
+                    EndPoint="1,1">
+                <GradientStop Color="#DC143C"
+             Offset="1"/>
+                <GradientStop Color="#D3D3D3"
+             Offset="0.1"/>
+            </LinearGradientBrush>
+
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Fill="white" Width="500" Height="350" RadiusX="29.88" RadiusY="29.88" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+
+        <Rectangle Fill="#ededed" Width="300" Height="350" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="FIT" FontSize="40" Margin="235,25,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="TRACK" FontSize="40" Margin="205,60,100,25" Foreground="#DC143C" Grid.Column="1" Grid.Row="1"/>
+
+        <Button x:Name="Profile_btn" Content="ME" Margin="372,48,138,316" Height="30" Width="30" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="Profile_btn_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="button" CornerRadius="20" Background="#D3D3D3">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#DC143C" TargetName="button"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Label Content="Your Workouts:" Margin="375,200,-500,-600" Foreground="#DC143C" FontWeight="bold"/>
+
+        <ListBox x:Name="workoutlist" VerticalAlignment="Top" HorizontalAlignment="Center" Height="120" Width="253" Grid.Column="1" Margin="0,183,0,0" Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Date, StringFormat='Date: {0:yyyy-MM-dd}'}" FontWeight="Bold" Foreground="#DC143C"/>
+                        <TextBlock Text="{Binding Type, StringFormat=' Type: {0}'}" FontWeight="Bold" Foreground="#DC143C"/>
+                        <TextBlock Text="{Binding Duration, StringFormat=' Duration: {0:hh\\:mm\\:ss}'}" FontWeight="Bold" Foreground="#DC143C"/>
+                        <TextBlock Text="{Binding CaloriesBurned, StringFormat=' Calories: {0}'}" FontWeight="Bold" Foreground="#DC143C"/>
+                        <TextBlock Text="{Binding Notes, StringFormat=' Notes: {0}'}" TextWrapping="Wrap" FontWeight="Bold" Foreground="#DC143C"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+
+        <StackPanel Orientation="Horizontal" Margin="280,130,-500,-600">
+
+
+            <Button x:Name="Details_btn" Content="Details" Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Click="Details_btn_Click" >
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="button" CornerRadius="10" Background="#d3d3d3">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#DC143C" TargetName="button"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="RemoveWorkout_btn" Content="Remove" Margin="10,0,0,0" Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="RemoveWorkout_btn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="button" CornerRadius="10" Background="#d3d3d3">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#DC143C" TargetName="button"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="AddWorkout_btn" Content="Add Workout" Margin="10,0,10,0" Height="30" Width="80" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="AddWorkout_btn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="button" CornerRadius="10" Background="#d3d3d3">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#DC143C" TargetName="button"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button x:Name="Signout_btn" Content="Sign out" Height="30" Width="60" Foreground="#DC143C" Cursor="Hand" Grid.Column="1" Grid.Row="1" Click="Signout_btn_Click" >
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="button" CornerRadius="10" Background="#d3d3d3">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#DC143C" TargetName="button"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+
     </Grid>
 </Window>

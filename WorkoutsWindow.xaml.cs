@@ -23,5 +23,31 @@ namespace FitTrack
         {
             InitializeComponent();
         }
-    }
+
+        private void Signout_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddWorkout_btn_Click(object sender, RoutedEventArgs e)
+        { 
+        
+        }
+
+        private void RemoveWorkout_btn_Click(object sender, RoutedEventArgs e)
+        { 
+        }
+
+        private void Details_btn_Click(object sender, RoutedEventArgs e)
+        { 
+        }
+
+        private void Profile_btn_Click(object sender, RoutedEventArgs e)
+        { 
+        }
+
+
+
+
+        }
 }
