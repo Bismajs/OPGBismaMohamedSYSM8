@@ -89,9 +89,36 @@ namespace FitTrack
                     "What is your pet's name?",
                     "Max"
                 );
+
+                // Lägg till två standardträningspass
+
+                normalUser.Workouts.Add(new StrengthWorkout
+                {
+                    Date = DateTime.Now.AddDays(-1), // en dag sedan 
+                    Duration = TimeSpan.FromMinutes(30),
+                    CaloriesBurned = 150,
+                    Notes = "Strength training for chest and shoulders.",
+                    Type = "Strength",
+                    Repetitions = 10
+                });
+
+                normalUser.Workouts.Add(new CardioWorkout
+                {
+                    Date = DateTime.Now.AddDays(-2), // För två dagar sedan
+                    Duration = TimeSpan.FromMinutes(45),
+                    CaloriesBurned = 300,
+                    Notes = "Morning jog in the park.",
+                    Type = "Cardio",
+                    Distance = 5 
+                });
+
+                // Lägg till användaren till listan
                 users.Add(normalUser);
             }
         }
 
-        }
+
     }
+}
+
+        

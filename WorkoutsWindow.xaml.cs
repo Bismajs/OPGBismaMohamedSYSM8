@@ -25,9 +25,15 @@ namespace FitTrack
             InitializeComponent();
             currentUser = user; // akttuella användaren
 
-        }
+            // Lägg till STANDARDanvändarens träningspass i workoutlist
 
-        private void Signout_btn_Click(object sender, RoutedEventArgs e)
+            foreach (var workout in currentUser.Workouts)
+            {
+                workoutlist.Items.Add(workout);
+            }
+    }
+
+    private void Signout_btn_Click(object sender, RoutedEventArgs e)
         {
             //navigerar tillbaka till mainwindow
             MainWindow mainWindow = new MainWindow();

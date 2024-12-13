@@ -10,6 +10,8 @@ namespace FitTrack
     public class User : Person
     {
         //egenskaper
+
+        public List<Workout> Workouts { get; private set; } = new List<Workout>();
         public string Country { get; set; }
         public string SecurityQuestion { get; set; }
         public string SecurityAnswer { get; set; }
@@ -25,6 +27,7 @@ namespace FitTrack
             Country = country;
             SecurityQuestion = securityQuestion;
             SecurityAnswer = securityAnswer;
+            Workouts = new List<Workout>();
         }
 
         //metod för inloggning
