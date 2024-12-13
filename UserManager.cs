@@ -63,5 +63,35 @@ namespace FitTrack
             return users.Find(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
         }
 
+        // Ny metod för att initiera standardanvändare
+        public static void InitializeDefaultUsers()
+        {
+            // Kontrollera om användarna redan finns
+            if (!users.Any(u => u.Username.Equals("admin", StringComparison.OrdinalIgnoreCase)))
+            {
+                // Lägg till en admin-användare
+                AdminUser admin = new AdminUser(
+                    "admin",
+                    "admin123",
+                    "Sweden",
+                    "What is your favorite color?",
+                    "Red"
+                );
+                users.Add(admin);
+            }
+            if (!users.Any(u => u.Username.Equals("user", StringComparison.OrdinalIgnoreCase)))
+            {
+                // Lägg till en vanlig användare
+                User normalUser = new User(
+                    "user",
+                    "user123",
+                    "Sweden",
+                    "What is your pet's name?",
+                    "Max"
+                );
+                users.Add(normalUser);
+            }
+        }
+
+        }
     }
-}

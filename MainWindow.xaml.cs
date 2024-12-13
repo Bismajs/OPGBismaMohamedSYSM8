@@ -19,6 +19,8 @@ namespace FitTrack
         public MainWindow()
         {
             InitializeComponent();
+            // Initiera standardanvändare
+            UserManager.InitializeDefaultUsers();
         }
 
         private void NavigateToForgotPasswordWindow(object sender, RoutedEventArgs e)
